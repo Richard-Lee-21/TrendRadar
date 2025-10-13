@@ -78,7 +78,7 @@ ipad
 mac
 ios
 
-ai
++ai
 !gai
 人工智能
 
@@ -103,7 +103,7 @@ ai
 水电站
 雅鲁藏布江
 
-新质生产力
+Github
 
 月球
 登月

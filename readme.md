@@ -449,7 +449,53 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 >
 > 1分钟部署： 企业微信（手机通知）
 
-**💡 提示：** 想要**实时更新**的网页版？fork 后，进入你的仓库 Settings → Pages，启用 GitHub Pages。[效果预览](https://sansan0.github.io/TrendRadar/)。
+**💡 GitHub Pages 部署指南：**
+
+想要**实时更新**的网页版？按照以下步骤操作：
+
+<details>
+<summary><strong>👉 点击查看详细部署步骤</strong></summary>
+
+### 1️⃣ 启用 GitHub Pages
+
+1. Fork 本项目后，进入你的仓库
+2. 点击 `Settings`（设置）
+3. 在左侧菜单找到 `Pages`
+4. 在 **Source** (来源) 部分，选择 `GitHub Actions`
+5. 保存设置
+
+### 2️⃣ 触发部署
+
+- **自动部署**：当 crawler 工作流运行并更新 index.html 后，Pages 部署工作流会自动触发
+- **手动部署**：进入 `Actions` 标签页，选择 `Deploy to GitHub Pages` 工作流，点击 `Run workflow` 手动触发
+
+### 3️⃣ 访问你的网站
+
+部署成功后，你可以通过以下地址访问：
+```
+https://你的用户名.github.io/TrendRadar
+```
+
+### 4️⃣ 配置自定义域名（可选）
+
+如果你想使用自己的域名：
+
+1. 在你的域名服务商处添加 DNS 记录：
+   - 类型：`CNAME`
+   - 名称：`www`（或其他子域名）
+   - 值：`你的用户名.github.io`
+   
+2. 回到 GitHub 仓库的 `Settings` > `Pages`
+3. 在 **Custom domain** 输入你的域名（如 `www.yourdomain.com`）
+4. 点击 `Save`
+5. 等待 DNS 检查通过（可能需要几分钟到几小时）
+6. 建议启用 `Enforce HTTPS` 选项
+
+**注意**：DNS 生效可能需要一些时间，请耐心等待。
+
+</details>
+
+[在线效果预览](https://sansan0.github.io/TrendRadar/)
 
 ### **减少 APP 依赖**
 
